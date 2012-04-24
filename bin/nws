@@ -1,0 +1,13 @@
+var argv = require('optimist').argv,
+	express = require('express'),
+	server = express.createServer(),
+	port = argv.p || 3030,
+	root = require('path').join(process.cwd(), argv.d ? '/' + argv.d : '');
+
+server.configure(function () {
+	server.use(express.static(root));
+});
+
+server.listen(port, function() {
+	console.log('Listening on port %d with root %s.', port, root);
+});
