@@ -11,8 +11,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 var argv = require('optimist')
-		.default('p', 3030)
-		.default('d', '')
+		.options('p', {
+			alias: 'port',
+			default: 3030
+		})
+		.options('d', {
+			alias: 'directory',
+			default: ''
+		})
 		.boolean('v')
 		.argv,
 	express = require('express'),
