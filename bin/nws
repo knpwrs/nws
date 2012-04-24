@@ -1,13 +1,18 @@
-var argv = require('optimist').argv,
+var argv = require('optimist')
+		.default('p', 3030)
+		.default('d', '')
+		.boolean('v')
+		.argv,
 	express = require('express'),
 	server = express.createServer(),
-	port = argv.p || 3030,
-	root = require('path').join(process.cwd(), argv.d ? '/' + argv.d : '');
+	root = require('path').join(process.cwd(), argv.d);
 
 server.configure(function () {
 	server.use(express.static(root));
+	if (argv.v)
+		server.use(require('./verbose')());
 });
 
-server.listen(port, function() {
-	console.log('Listening on port %d with root %s.', port, root);
+server.listen(argv.p, function() {
+	console.log('Listening on port %d with root %s', argv.p, root);
 });
