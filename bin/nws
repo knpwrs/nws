@@ -19,11 +19,17 @@ var argv = require('optimist')
 			alias: 'directory',
 			default: ''
 		})
-		.boolean('v')
+		.boolean('v').alias('v', 'verbose')
+		.boolean('h').alias('h', 'help')
 		.argv,
 	express = require('express'),
 	server = express.createServer(),
 	root = require('path').join(process.cwd(), argv.d);
+
+if (argv.h) {
+	console.log('Usage: nws [-v | --verbose] [-d | --directory DIRECTORY] [-p | --port PORT] [-h | --help]');
+	process.exit();
+}
 
 server.configure(function () {
 	server.use(express.static(root));
