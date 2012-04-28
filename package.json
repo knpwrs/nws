@@ -10,6 +10,7 @@
 		"optimist": "0.3.1",
 		"express": "2.5.9"
 	},
+	"repository": "git://github.com/KenPowers/nws"
 	"bin": {
 		"nws": "./bin/nws"
 	},
