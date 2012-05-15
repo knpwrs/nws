@@ -23,8 +23,8 @@ var argv = require('optimist')
 		.boolean('v').alias('v', 'verbose')
 		.boolean('h').alias('h', 'help')
 		.argv,
-	express = require('express'),
-	server = express.createServer(),
+	connect = require('connect'),
+	http = require('http'),
 	root = require('path').join(process.cwd(), argv.d);
 
 if (argv.h) {
@@ -32,12 +32,14 @@ if (argv.h) {
 	process.exit();
 }
 
-server.configure(function () {
-	server.use(express.static(root));
-	if (argv.v)
-		server.use(require('./verbose')());
-});
+var app = connect().use(connect.static(root));
+if (argv.v) app.use(require('./verbose'));
 
-server.listen(argv.p, function() {
+var server = http.createServer(app).listen(argv.p, function() {
 	console.log('Listening on port %d with root %s', argv.p, root);
+	process.on('SIGINT', function () {
+		console.log('Shutting down server...');
+		server.close();
+		process.exit();
+	});
 });
