@@ -12,7 +12,6 @@ In any directory where you are working on a static web project, simply execute t
     nws
 
 This will launch a server on port `3030` for you to visit in your web browser at `http://localhost:3030`.
-Initial.
 
 You can also specify a port:
 
