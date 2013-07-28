@@ -22,6 +22,7 @@ var argv = require('optimist')
 		})
 		.boolean('v').alias('v', 'verbose')
 		.boolean('h').alias('h', 'help')
+		.boolean('o').alias('o', 'open browser')
 		.argv,
 	connect = require('connect'),
 	http = require('http'),
@@ -37,6 +38,10 @@ if (argv.v) app.use(require('./verbose'));
 
 var server = http.createServer(app).listen(argv.p, function() {
 	console.log('Listening on port %d with root %s', argv.p, root);
+
+	if (argv.o)
+		require('open')('http://localhost:' + argv.p);
+
 	process.on('SIGINT', function () {
 		console.log('Shutting down server...');
 		server.close();
