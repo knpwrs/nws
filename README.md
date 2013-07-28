@@ -19,6 +19,10 @@ You can also specify a port:
 
 This will launch a server on port `8080`.
 
+Add the -o flag to **open** the site in your default browser (http://localhost:3030):
+
+	nws -o
+
 You can also specify the directory to use as the document root:
 
     nws -d relative/path/to/other/directory
