@@ -23,14 +23,14 @@ var argv = require('optimist')
 		})
 		.boolean('v').alias('v', 'verbose')
 		.boolean('h').alias('h', 'help')
-		.boolean('o').alias('o', 'open browser')
+		.boolean('o').alias('o', 'open')
 		.argv,
 	connect = require('connect'),
 	http = require('http'),
 	root = require('path').join(process.cwd(), argv.d);
 
 if (argv.h) {
-	console.log('Usage: nws [-v | --verbose] [-d | --directory DIRECTORY] [-p | --port PORT] [-h | --help]');
+	console.log('Usage: nws [-v | --verbose] [-o | --open] [-d | --directory DIRECTORY] [-p | --port PORT] [-h | --help]');
 	process.exit();
 }
 
