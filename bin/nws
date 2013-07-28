@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// vim: set ft=javascript:
 /*
 Released under the MIT License.
 
@@ -22,13 +23,14 @@ var argv = require('optimist')
 		})
 		.boolean('v').alias('v', 'verbose')
 		.boolean('h').alias('h', 'help')
+		.boolean('o').alias('o', 'open')
 		.argv,
 	connect = require('connect'),
 	http = require('http'),
 	root = require('path').join(process.cwd(), argv.d);
 
 if (argv.h) {
-	console.log('Usage: nws [-v | --verbose] [-d | --directory DIRECTORY] [-p | --port PORT] [-h | --help]');
+	console.log('Usage: nws [-v | --verbose] [-o | --open] [-d | --directory DIRECTORY] [-p | --port PORT] [-h | --help]');
 	process.exit();
 }
 
@@ -37,6 +39,10 @@ if (argv.v) app.use(require('./verbose'));
 
 var server = http.createServer(app).listen(argv.p, function() {
 	console.log('Listening on port %d with root %s', argv.p, root);
+
+	if (argv.o)
+		require('open')('http://localhost:' + argv.p);
+
 	process.on('SIGINT', function () {
 		console.log('Shutting down server...');
 		server.close();
