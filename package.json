@@ -1,13 +1,13 @@
 {
   "name": "nws",
   "description": "Launch a node-powered static web server in the current working directory.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": {
     "name": "Kenneth Powers",
     "email": "mail@kenpowers.net"
   },
   "contributors": [
-    { "name": "Scott Stanfield", 
+    { "name": "Scott Stanfield",
       "email": "scott@vertigo.com"
     }
   ],
