@@ -23,14 +23,21 @@ You can also specify a port:
 
 This will launch a server on port `8080`.
 
-Add the -o flag to **open** the site in your default browser
+Add the -o flag to open the site in your default browser
 (http://localhost:3030):
 
-  nws -o
+    nws -o
 
 You can also specify the directory to use as the document root:
 
     nws -d relative/path/to/other/directory
+
+Using quotes and semi-colons you can specify multiple directoies to use as
+roots:
+
+    nws -d 'dir1;dir2'
+
+The directories are searched in order and the first matching file is returned.
 
 The final option is used to control verbosity. With the `-v` flag the server
 will log all requested files to the console:
