@@ -1,7 +1,7 @@
 {
   "name": "nws",
   "description": "Launch a node-powered static web server in the current working directory.",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "author": {
     "name": "Kenneth Powers",
     "email": "mail@kenpowers.net"
