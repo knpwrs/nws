@@ -28,11 +28,6 @@ Add the -o flag to open the site in your default browser
 
     nws -o
     
-If you want all requests to resolve to a base path (i.e. 
-`http://localhost:3030/basepath`) without having to place all files into a 
-`src/basepath` sub-directory, use the -b flag:
-
-    nws -b /basepath
 
 You can also specify the directory to use as the document root:
 
@@ -44,6 +39,12 @@ roots:
     nws -d 'dir1;dir2'
 
 The directories are searched in order and the first matching file is returned.
+
+If you want all requests to resolve to a base path (i.e.
+`http://localhost:3030/basepath`) without having to place all files into a
+`src/basepath` sub-directory, use the -b flag:
+
+    nws -b basepath
 
 The final option is used to control verbosity. With the `-v` flag the server
 will log all requested files to the console:
