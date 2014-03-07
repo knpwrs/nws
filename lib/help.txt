@@ -8,6 +8,12 @@ Options:
       Example: -d 'dir1;dir2'
     Directories are searched in order. First matching file is served.
     Default: Current working directory.
+  -b, --basepath
+    Base path for all requests to build off of
+    Make sure to inlcude forward slash
+      Example: -b /sitebase
+               localhost:3030/sitebase/subdir will look in /subdir for static files.
+      Default: Current working directory.
   -v, --verbose
     Log all requests to the console.
   -o, --open
