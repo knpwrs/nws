@@ -27,6 +27,12 @@ Add the -o flag to open the site in your default browser
 (http://localhost:3030):
 
     nws -o
+    
+If you want all requests to resolve to a base path (i.e. 
+`http://localhost:3030/basepath`) without having to place all files into a 
+`src/basepath` sub-directory, use the -b flag:
+
+    nws -b /basepath
 
 You can also specify the directory to use as the document root:
 
