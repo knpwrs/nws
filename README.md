@@ -1,4 +1,4 @@
-#nws
+nws -x http://example.com #nws
 nws is a simple tool designed to launch a simple static web server in your
 current working directory.
 
@@ -62,3 +62,15 @@ You can use `-h` to display help:
 All of these flags are available in long form as well:
 
     nws --help --verbose --port 8080 --directory public
+    
+You can use `-x` to specify proxy path, ( either prefix with -v  or directories -d is required or both ) :
+
+    nws -x http://example.com 
+    
+    //or
+    
+    nws -x http://example.com -v v1
+    
+    //or
+    
+    nws -x http://example.com -d public
