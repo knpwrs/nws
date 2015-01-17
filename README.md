@@ -27,18 +27,21 @@ Add the -o flag to open the site in your default browser
 (http://localhost:3030):
 
     nws -o
-    
 
 You can also specify the directory to use as the document root:
 
     nws -d relative/path/to/other/directory
 
-Using quotes and semi-colons you can specify multiple directoies to use as
-roots:
+Using colons you can specify multiple directories to use as roots (like
+`$PATH` in *nix):
 
-    nws -d 'dir1;dir2'
+    nws -d dir1:dir2
 
 The directories are searched in order and the first matching file is returned.
+You can achieve the same thing using quotes and semi-colons if that's more
+your style:
+
+    nws -d 'dir1;dir2'
 
 If you want all requests to resolve to a base path (i.e.
 `http://localhost:3030/basepath`) without having to place all files into a
