@@ -2,9 +2,10 @@ Options:
   -p, --port
     Default: 3030
   -d, --directories
-    Semi-colon separated list of directories to use as roots.
+    Colon or semi-colon separated list of directories to use as roots.
     Make sure to quote your argument when using semi-colons.
       Example: -d dir1
+      Example: -d dir1:dir2
       Example: -d 'dir1;dir2'
     Directories are searched in order. First matching file is served.
     Default: Current working directory.
