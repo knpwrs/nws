@@ -69,7 +69,7 @@ You can use `-x` to specify proxy path, ( either prefix with -y  or directories 
     
     //or
     
-    nws -x http://example.com -y v1
+    nws -x http://example.com -y /v1
     
     //or
     
