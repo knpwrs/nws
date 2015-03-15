@@ -1,4 +1,4 @@
-nws -x http://example.com #nws
+#nws
 nws is a simple tool designed to launch a simple static web server in your
 current working directory.
 
