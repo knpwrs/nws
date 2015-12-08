@@ -15,7 +15,7 @@
     "connect": "~2.7.3",
     "open": "0.0.4"
   },
-  "repository": "git://github.com/KenPowers/nws",
+  "repository": "https://github.com/knpwrs/nws.git",
   "bin": {
     "nws": "./bin/nws"
   },
