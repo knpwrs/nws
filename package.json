@@ -2,6 +2,9 @@
   "name": "nws",
   "description": "Launch a node-powered static web server in the current working directory.",
   "version": "0.6.1",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "author": {
     "name": "Kenneth Powers",
     "email": "mail@kenpowers.net"
@@ -28,5 +31,9 @@
     "server",
     "local",
     "static"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0"
+  }
 }
