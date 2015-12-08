@@ -1,10 +1,12 @@
 {
   "name": "nws",
   "description": "Launch a node-powered static web server in the current working directory.",
-  "version": "0.6.1",
+  "version": "0.0.0-semantically-released",
   "scripts": {
+    "commit": "git-cz",
     "lint": "eslint .",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": {
     "name": "Kenneth Powers",
@@ -18,12 +20,17 @@
   ],
   "dependencies": {
     "connect": "~2.7.3",
+    "ghooks": "^1.0.1",
     "morgan": "^1.6.1",
     "open": "0.0.4",
     "opn": "^3.0.3",
-    "optimist": "0.3.1"
+    "optimist": "0.3.1",
+    "validate-commit-msg": "^1.0.0"
   },
-  "repository": "https://github.com/knpwrs/nws.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knpwrs/nws.git"
+  },
   "bin": {
     "nws": "./bin/nws"
   },
@@ -35,7 +42,15 @@
     "static"
   ],
   "devDependencies": {
+    "commitizen": "^2.4.6",
+    "cz-conventional-changelog": "^1.1.5",
     "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.0.0"
+    "eslint-config-airbnb": "^2.0.0",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
