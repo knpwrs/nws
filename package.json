@@ -3,7 +3,8 @@
   "description": "Launch a node-powered static web server in the current working directory.",
   "version": "0.6.1",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "author": {
     "name": "Kenneth Powers",
