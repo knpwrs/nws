@@ -49,6 +49,10 @@ If you want all requests to resolve to a base path (i.e.
 
     nws -b basepath
 
+You can enable `gzip` / `deflate` compression with the `-z` flag:
+
+    nws -z
+
 The final option is used to control verbosity. With the `-v` flag the server
 will log all requested files to the console:
 
@@ -64,4 +68,4 @@ You can use `-h` to display help:
 
 All of these flags are available in long form as well:
 
-    nws --help --verbose --port 8080 --directory public
+    nws --help --compress --verbose --port 8080 --directory public

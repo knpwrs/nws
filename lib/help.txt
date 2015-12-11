@@ -13,6 +13,8 @@ Options:
     Base path for all requests to build off of.
       Example: -b sitebase
                localhost:3030/sitebase/subdir will look in /subdir for static files.
+  -z, --compress
+    Enable gzip / deflate compression.
   -v, --verbose
     Log all requests to the console.
   -o, --open
