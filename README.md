@@ -1,5 +1,7 @@
 # `nws`
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/knpwrs/nws.svg)](https://greenkeeper.io/)
+
 nws is a simple tool designed to launch a simple static web server in your
 current working directory.
 
