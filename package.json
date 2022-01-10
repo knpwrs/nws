@@ -20,10 +20,11 @@
   ],
   "dependencies": {
     "compression": "^1.6.0",
-    "connect": "~2.7.3",
+    "connect": "^3.7.0",
     "morgan": "^1.6.1",
     "opn": "^3.0.3",
-    "optimist": "0.3.1"
+    "optimist": "0.3.1",
+    "serve-static": "^1.14.2"
   },
   "repository": {
     "type": "git",
@@ -40,12 +41,12 @@
     "static"
   ],
   "devDependencies": {
-    "commitizen": "^2.4.6",
+    "commitizen": "^3.0.0",
     "cz-conventional-changelog": "^1.1.5",
-    "eslint": "^1.10.3",
+    "eslint": "^8.6.0",
     "eslint-config-airbnb": "^2.0.0",
     "ghooks": "^1.0.1",
-    "semantic-release": "^4.3.5",
+    "semantic-release": "^18.0.1",
     "validate-commit-msg": "^1.0.0"
   },
   "config": {
